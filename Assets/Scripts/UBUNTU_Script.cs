@@ -29,7 +29,7 @@ public class UBUNTU_Script : MonoBehaviour
     [Header("XP")]
     public float WaitTime;
 
-    public int firstTime = 10;
+    public int firstTime = 60;
 
 
     // Start is called before the first frame update

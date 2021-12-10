@@ -14,18 +14,23 @@ public class MusicPlayer : MonoBehaviour
     public Text CurrentTime;
     public Text SongLength;
 
-
+    [Header("Volume")]
+    public Slider Volume;
+    public Text volumeText;
 
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         StartAudio();
+        audioSource.volume = PlayerPrefs.GetFloat("Volume");
+        Volume.value = audioSource.volume;
     }
 
     // Update is called once per frame
     void Update()
     {
+        SetVolumeText(audioSource.volume * 100f);
 
         
 
@@ -85,5 +90,17 @@ public class MusicPlayer : MonoBehaviour
             audioSource.Stop();
             stop = false;
         }
+    }
+
+    private void SetVolumeText(float x)
+    {
+        volumeText.text = x.ToString("0") + "%";
+    }
+
+    public void ChangeVolume()
+    {
+        audioSource.volume = Volume.value;
+        PlayerPrefs.SetFloat("Volume", audioSource.volume);
+        Debug.Log("Saved: " + audioSource.volume);
     }
 }
