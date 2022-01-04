@@ -24,7 +24,7 @@ public class UBUNTU_Script : MonoBehaviour
 
 
     [Header("XP Gap")]
-    int XP_Gap = 10000000;
+    int XP_Gap = 100000000;
 
     [Header("XP")]
     public float WaitTime;
@@ -60,6 +60,11 @@ public class UBUNTU_Script : MonoBehaviour
         if(WaitTime <= 1.5f)
         {
             WaitTime = 1.5f;
+        }
+
+        if (Input.GetButton("Tab"))
+        {
+            Debug.Log("pressed");
         }
     }
 
