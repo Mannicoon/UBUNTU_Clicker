@@ -8174,8 +8174,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ae3f0c506d5829e4382b79ccbfb12ca6, type: 3}
   - {fileID: 8300000, guid: 2d43c974f32a2d949b3f620e648f4d81, type: 3}
   - {fileID: 8300000, guid: 0d203389a2445254f9a5b5add5ba31c4, type: 3}
-  - {fileID: 8300000, guid: 005a14df508a3354f8314200b93aff3e, type: 3}
-  - {fileID: 8300000, guid: 8444c4377ae075e47919dbe3ede44dca, type: 3}
   musicName: {fileID: 2129156693}
   musicLength: {fileID: 326628661}
   CurrentTime: {fileID: 919945676}
